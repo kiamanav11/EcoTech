@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get Involved | EcoTech</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1 class="logo">EcoTech</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="innovations.html">Innovations</a>
+      <a href="getinvolved.html" class="active">Get Involved</a>
+    </nav>
+  </header>
+
+  <section class="hero small-hero" style="background-image: url('images/students.jpg');">
+    <div class="overlay">
+      <h1>Be the Change 🌎</h1>
+      <p>Your actions today create tomorrow’s sustainable planet.</p>
+    </div>
+  </section>
+
+  <section class="form-section">
+    <h2>Take the Green Pledge</h2>
+    <p>Join thousands of young innovators helping the Earth breathe better!</p>
+
+    <form id="pledgeForm" onsubmit="return submitPledge();">
+      <input type="text" id="name" placeholder="Enter your name" required>
+      <select id="action" required>
+        <option value="">Choose Your Green Action</option>
+        <option value="plant">🌳 Plant a Tree</option>
+        <option value="recycle">♻️ Recycle E-Waste</option>
+        <option value="saveenergy">💡 Save Electricity</option>
+      </select>
+      <button type="submit">Submit Pledge</button>
+    </form>
+    <p id="thanksMsg"></p>
+  </section>
+
+  <section class="gallery">
+    <h2>Green Moments Captured 📸</h2>
+    <div class="gallery-grid">
+      <img src="images/solar.jpg" alt="Solar Energy">
+      <img src="images/recycle.jpg" alt="Recycling Efforts">
+      <img src="images/car.jpg" alt="Electric Car">
+      <img src="images/students.jpg" alt="Students Planting Trees">
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 EcoTech | Designed by Class IX Group</p>
+  </footer>
+</body>
+</html>

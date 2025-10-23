@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EcoTech — Go Green with Technology</title>
+  <meta name="description" content="EcoTech — harnessing innovation to make the world cleaner, greener and more sustainable. Created by Class IX." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Loading overlay (subtle animated leaf) -->
+  <div id="loader" aria-hidden="false">
+    <div class="leaf"></div>
+    <div class="loading-text">EcoTech — planting ideas...</div>
+  </div>
+
+  <!-- Header / Nav -->
+  <header class="site-header">
+    <div class="brand">
+      <div class="logo">🌿</div>
+      <div class="title">
+        <h1>EcoTech</h1>
+        <small>Go Green with Technology</small>
+      </div>
+    </div>
+
+    <nav id="main-nav" class="nav">
+      <a href="#home" class="nav-link">Home</a>
+      <a href="#innovations" class="nav-link">Innovations</a>
+      <a href="#getinvolved" class="nav-link">Get Involved</a>
+      <a href="#gallery" class="nav-link">Gallery</a>
+    </nav>
+
+    <div class="controls">
+      <button id="darkToggle" aria-pressed="false" title="Toggle dark mode">🌓</button>
+      <button id="menuBtn" aria-expanded="false" aria-controls="main-nav">☰</button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main>
+    <section id="home" class="hero">
+      <!-- Replace images/hero-4k.jpg with your 4K image -->
+      <div class="hero-image" role="img" aria-label="Blended image of nature and technology" style="background-image: url('images/hero-4k.jpg')"></div>
+
+      <div class="hero-content">
+        <h2>Technology that breathes with the Earth</h2>
+        <p class="lead">
+          From smart grids to recycled circuits — discover real-world innovations that turn human ingenuity into hope for our planet.
+          Dive into bright ideas, startling facts and actions you can take today.
+        </p>
+
+        <div class="hero-ctas">
+          <button id="joinBtn" class="btn-primary">Join the Movement</button>
+          <a class="btn-ghost" href="#getinvolved">Take the Pledge</a>
+        </div>
+
+        <div class="quick-stats" aria-hidden="false">
+          <div><span class="counter" data-target="12500">0</span><small>Trees-inspired</small></div>
+          <div><span class="counter" data-target="780000">0</span><small>kWh Saved</small></div>
+          <div><span class="counter" data-target="112">0</span><small>Community Projects</small></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Innovations -->
+    <section id="innovations" class="section">
+      <h2>Green Innovations Changing Everything</h2>
+      <p class="section-intro">Each card below tells the story of an idea — its impact and how you can try it locally.</p>
+
+      <div class="cards">
+        <article class="card">
+          <img src="images/solar.jpg" alt="Solar panels on rooftops">
+          <h3>Smart Solar Grids</h3>
+          <p>
+            Smart microgrids powered by solar and AI balance energy, reduce waste and keep your lights on when it matters.
+            Imagine neighbourhood batteries that save money and the planet.
+          </p>
+          <button class="detail-btn" data-topic="smart-solar">Read More</button>
+        </article>
+
+        <article class="card">
+          <img src="images/ev.jpg" alt="Electric vehicle charging">
+          <h3>Electric Mobility</h3>
+          <p>
+            E-buses, shared e-bikes and community charging hubs replace fumes with quiet, efficient travel — and students lead the change.
+          </p>
+          <button class="detail-btn" data-topic="ev">Read More</button>
+        </article>
+
+        <article class="card">
+          <img src="images/recycle.jpg" alt="E-waste recycling">
+          <h3>E-waste Recycling</h3>
+          <p>
+            Every phone recycled is raw materials saved. Learn simple steps to safely recycle devices and recover precious metals.
+          </p>
+          <button class="detail-btn" data-topic="ewaste">Read More</button>
+        </article>
+
+        <article class="card">
+          <img src="images/green-arch.jpg" alt="Green architecture rooftop garden">
+          <h3>Green Architecture</h3>
+          <p>
+            Cool roofs, rain gardens and passive ventilation keep buildings comfortable without extra energy — human-centered and planet-kind.
+          </p>
+          <button class="detail-btn" data-topic="green-arch">Read More</button>
+        </article>
+      </div>
+
+      <!-- Embedded video (interactive element) -->
+      <div class="video-wrap">
+        <h3>Watch — The Future is Green</h3>
+        <div class="video-responsive">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/c1dBa5I7c-w?si=pIggPzR3rO8e7nN0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Get Involved -->
+    <section id="getinvolved" class="section alt">
+      <h2>Take the Green Pledge</h2>
+      <p class="section-intro">Small promises create huge ripples. Make a pledge and see how your class contributes.</p>
+
+      <div class="two-col">
+        <!-- Pledge form -->
+        <form id="pledgeForm" class="pledge-card" novalidate>
+          <label for="pname">Name</label>
+          <input id="pname" name="name" required placeholder="Your full name">
+
+          <label for="action">Pledge Action</label>
+          <select id="action" name="action" required>
+            <option value="">-- Choose an action --</option>
+            <option>Plant a tree</option>
+            <option>Run e-waste drive</option>
+            <option>Cycle to school one day weekly</option>
+            <option>Reduce screen brightness by 20%</option>
+          </select>
+
+          <label for="why">Why this matters (short)</label>
+          <textarea id="why" name="why" rows="3" placeholder="Write a sentence to inspire others..."></textarea>
+
+          <div class="form-actions">
+            <button type="submit" class="btn-primary">Pledge Now</button>
+            <button type="button" id="clearPledge" class="btn-ghost">Clear</button>
+          </div>
+
+          <p id="pledgeMsg" class="muted"></p>
+        </form>
+
+        <!-- Tips & carousel -->
+        <aside class="tips">
+          <h3>Quick Green Tips</h3>
+          <div id="tipBox" class="tipBox" aria-live="polite">Turn off the charger—phone fully charged? Unplug!</div>
+
+          <h4>Interactive Actions</h4>
+          <ul class="actions-list">
+            <li><button class="mini-btn" data-quote="Kids can run e-waste drives at school!">Start e-waste drive</button></li>
+            <li><button class="mini-btn" data-quote="Plant native trees—they need less water.">Plant native species</button></li>
+            <li><button class="mini-btn" data-quote="Use a dry cloth to clean devices—not water.">Device care</button></li>
+          </ul>
+
+          <h4 class="muted">Your class leaderboard</h4>
+          <ol id="leaderboard" class="leaderboard">
+            <!-- JS will populate -->
+          </ol>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="section">
+      <h2>Gallery — Our Green Vision</h2>
+      <p class="section-intro">Student posters, prototypes and photos from local projects.</p>
+      <div class="gallery" aria-label="Gallery of student images">
+        <img src="images/gallery1.jpg" alt="Students planting a tree" tabindex="0">
+        <img src="images/gallery2.jpg" alt="DIY solar oven" tabindex="0">
+        <img src="images/gallery3.jpg" alt="E-bike prototype" tabindex="0">
+        <img src="images/gallery4.jpg" alt="Recycling drive poster" tabindex="0">
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <p>© 2025 EcoTech — Created by Class IX. Powered by curiosity and kindness.</p>
+        <p class="muted">Open the site locally: copy the folder to your pen drive and bring the link to present.</p>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Modal for card details -->
+  <div id="modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-content">
+      <button id="closeModal" class="close-modal" aria-label="Close">✕</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
